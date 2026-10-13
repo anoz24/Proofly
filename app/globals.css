@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ─── Proofly design tokens ─────────────────────────────────────── */
+@theme inline {
+  /* shadcn compatibility layer */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Proofly brand colors */
+  --color-midnight: #0A1633;
+  --color-navy: #14307A;
+  --color-proof: #1F4FE0;
+  --color-azure: #4F8CFF;
+  --color-sky: #9CC7FF;
+  --color-mist: #DCEBFF;
+  --color-frost: #F4F8FF;
+  --color-ink-muted: #3C4A6B;
+  --color-line: #C9DDF8;
+
+  /* Status colors */
+  --color-status-pending-fg: #8A4B08;
+  --color-status-pending-bg: #FEF3C7;
+  --color-status-verified-fg: #0B6B43;
+  --color-status-verified-bg: #DDF5E8;
+  --color-status-rejected-fg: #A3231A;
+  --color-status-rejected-bg: #FDE7E5;
+
+  /* Proofly fonts */
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+
+  /* Proofly radius */
+  --radius-control: 14px;
+  --radius-tile: 18px;
+  --radius-card: 24px;
+}
+
+/* ─── shadcn semantic tokens (light) ───────────────────────────── */
+:root {
+  --background: #F4F8FF;
+  --foreground: #0A1633;
+  --card: #FFFFFF;
+  --card-foreground: #0A1633;
+  --popover: #FFFFFF;
+  --popover-foreground: #0A1633;
+  --primary: #1F4FE0;
+  --primary-foreground: #FFFFFF;
+  --secondary: #DCEBFF;
+  --secondary-foreground: #14307A;
+  --muted: #F4F8FF;
+  --muted-foreground: #3C4A6B;
+  --accent: #DCEBFF;
+  --accent-foreground: #14307A;
+  --destructive: #A3231A;
+  --border: #C9DDF8;
+  --input: #C9DDF8;
+  --ring: #4F8CFF;
+  --chart-1: #1F4FE0;
+  --chart-2: #4F8CFF;
+  --chart-3: #9CC7FF;
+  --chart-4: #DCEBFF;
+  --chart-5: #0A1633;
+  --radius: 0.875rem;
+  --sidebar: #F4F8FF;
+  --sidebar-foreground: #0A1633;
+  --sidebar-primary: #1F4FE0;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #DCEBFF;
+  --sidebar-accent-foreground: #14307A;
+  --sidebar-border: #C9DDF8;
+  --sidebar-ring: #4F8CFF;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-frost text-midnight font-sans;
+  }
+}
