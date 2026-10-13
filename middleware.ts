@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient } from "@supabase/ssr";
 
-export async function proxy(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   // Guard: if env vars aren't set yet, don't crash — just allow through to
   // let the app render its "missing env" error page.
   if (
